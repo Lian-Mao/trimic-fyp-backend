@@ -9,7 +9,7 @@ $username=$_POST["name"];
 $passworduser=$_POST["password"];
 $hname=$_GET['hname'];
 
-
+echo "powerless";
 // Create connection
 $conn = new mysqli($servername, $uusername, $password, $dbname);
 // Check connection
@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT password FROM user where username='".$username."'";
 $result = $conn->query($sql);
-echo $result;
+
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
